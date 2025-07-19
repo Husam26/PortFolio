@@ -7,7 +7,7 @@ const projects = [
     description:
       "End-to-end Salesforce solution with automation, flows, and custom objects built for real-world business scenarios.",
     tech: ["Salesforce", "Apex", "Flow Builder", "Lightning App Builder"],
-    link: "https://github.com/Husam26/Salesforce-Capstone", // Replace with actual repo link
+    link: "https://github.com/Husam26/salesforce-capstone-replastix", // Replace with actual repo link
     bgColor: "from-[#e0f7fa] to-[#80deea]",
   },
 
@@ -17,6 +17,7 @@ const projects = [
       "AI-powered toolkit for IT professionals with resume builder, job analyzer, and cover letter generation.",
     tech: ["React", "Node.js", "OpenAI", "Tailwind CSS"],
     link: "https://github.com/Husam26/SensAI",
+    liveLink: "https://sens-ai-flax.vercel.app", // Add your live URL here
     bgColor: "from-[#fffaf0] to-[#f8bbd0]",
   },
   {
@@ -25,6 +26,7 @@ const projects = [
       "Voice-enabled MERN stack assistant with user-specific chat history, modes, and JWT auth.",
     tech: ["React", "Node.js", "MongoDB", "Speech-to-Text"],
     link: "https://github.com/Husam26/Ai-assistant",
+    liveLink: "https://ai-assistant-1-sqte.onrender.com", // Add your live URL here
     bgColor: "from-[#fce4ec] to-[#fdfdfd]",
   },
   {
@@ -49,6 +51,7 @@ const projects = [
       "MERN e-commerce fitness app with authentication, cart, admin panel, and payments.",
     tech: ["MERN", "JWT", "Tailwind", "MongoDB"],
     link: "https://github.com/Husam26/PureFit-",
+    liveLink: "https://pure-fit-frontend.vercel.app", // Add your live URL here
     bgColor: "from-[#ede7f6] to-[#f3e5f5]",
   },
   {
@@ -57,6 +60,7 @@ const projects = [
       "Full-stack video platform with live video call + chat features using Stream Chat SDK.",
     tech: ["React", "Node.js", "CSS", "Stream SDK"],
     link: "https://github.com/Husam26/streamify",
+    liveLink: "https://streamify-no49.onrender.com", // Add your live URL here
     bgColor: "from-[#fdf6ec] to-[#fdfdfd]",
   },
   {
@@ -65,6 +69,7 @@ const projects = [
       "News app that fetches real-time headlines by category using the News API.",
     tech: ["React", "Bootstrap", "News API"],
     link: "https://github.com/Husam26/NewsNow",
+    liveLink: "https://your-live-salesforce-app-url.com", // Add your live URL here
     bgColor: "from-[#ffffff] to-[#fff1e6]",
   },
   {
@@ -73,6 +78,7 @@ const projects = [
       "Secure cloud-based MERN app to write, edit, and manage your personal notes.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     link: "https://github.com/Husam26/MernStack-Noteapp",
+    liveLink: "https://your-live-salesforce-app-url.com", // Add your live URL here
     bgColor: "from-[#fff3e0] to-[#fdfdfd]",
   },
 ];
@@ -116,14 +122,27 @@ const ProjectCard = ({ project, index, range, targetScale }) => {
             ))}
           </div>
         </div>
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gray-800 text-white px-5 py-2.5 mt-6 rounded-lg font-medium hover:bg-gray-900 shadow-md transition-all hover:scale-105 inline-block"
-        >
-          🔗 Explore Project
-        </a>
+
+        <div className="mt-6 flex justify-center gap-4">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-800 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-gray-900 shadow-md transition-all hover:scale-105 inline-block"
+          >
+            🔗 GitHub Repo
+          </a>
+          {project.liveLink && (
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 shadow-md transition-all hover:scale-105 inline-block"
+            >
+              🚀 Live Demo
+            </a>
+          )}
+        </div>
       </motion.div>
     </div>
   );
