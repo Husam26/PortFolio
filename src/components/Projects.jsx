@@ -3,83 +3,36 @@ import { useRef } from "react";
 
 const projects = [
   {
-    title: "🏢 Salesforce Capstone",
+    title: "🚀 NEXORA – AI-Driven CRM & Revenue Pipeline",
     description:
-      "End-to-end Salesforce solution with automation, flows, and custom objects built for real-world business scenarios.",
-    tech: ["Salesforce", "Apex", "Flow Builder", "Lightning App Builder"],
-    link: "https://github.com/Husam26/salesforce-capstone-replastix", // Replace with actual repo link
-    bgColor: "from-[#e0f7fa] to-[#80deea]",
-  },
-
-  {
-    title: "🧠 SENSAI",
-    description:
-      "AI-powered toolkit for IT professionals with resume builder, job analyzer, and cover letter generation.",
-    tech: ["React", "Node.js", "OpenAI", "Tailwind CSS"],
-    link: "https://github.com/Husam26/SensAI",
-    liveLink: "https://sens-ai-flax.vercel.app", // Add your live URL here
-    bgColor: "from-[#fffaf0] to-[#f8bbd0]",
+      "Architected a scalable CRM system with role-based access control and modular backend design. Implemented Controller-Service-Model architecture following low-level design principles. Developed independent micro-modules: Smart Invoicing, Task Manager, Smart Email using Node.js, connected via unified API Gateway. Optimized Mongo queries to handle complex deal ownership and assignment logic.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "REST APIs"],
+    link: "https://github.com/Husam26",
+    bgColor: "from-[#e0e7ff] to-[#c7d2fe]",
   },
   {
-    title: "🎙️ AI Assistant (Nova)",
+    title: "🏥 Agentforce Healthcare Navigation & Triage",
     description:
-      "Voice-enabled MERN stack assistant with user-specific chat history, modes, and JWT auth.",
-    tech: ["React", "Node.js", "MongoDB", "Speech-to-Text"],
-    link: "https://github.com/Husam26/Ai-assistant",
-    liveLink: "https://ai-assistant-1-sqte.onrender.com", // Add your live URL here
-    bgColor: "from-[#fce4ec] to-[#fdfdfd]",
+      "Architected an AI-driven patient scheduling and triage system leveraging Salesforce Agentforce, Health Cloud, and Data Cloud to automate clinical workflows. Engineered an Advanced Symptom Router using Apex to intelligently map complex patient inputs to clinical departments. Integrated a 360° Patient Intelligence Hub via Data Cloud with a Predictive No-Show Model using Apex invocable actions.",
+    tech: ["Salesforce", "Apex", "Health Cloud", "Data Cloud", "Agentforce", "LWC"],
+    link: "https://github.com/Husam26",
+    bgColor: "from-[#dbeafe] to-[#bfdbfe]",
   },
   {
-    title: "💰 Welth",
+    title: "🩺 IoT Health – Smart Health Monitoring System",
     description:
-      "AI-integrated finance platform for tracking daily expenses, analytics, and budgeting.",
-    tech: ["Next.js", "MongoDB", "Tailwind", "AI"],
+      "Built a real-time health monitoring system using Socket.io for live sensor data ingestion. Integrated machine learning models to predict health risks based on vital parameters. Developed interactive dashboards for historical data visualization and trend analysis.",
+    tech: ["React", "Node.js", "Socket.io", "ML", "Express", "MongoDB"],
+    link: "https://github.com/Husam26",
+    bgColor: "from-[#d1fae5] to-[#a7f3d0]",
+  },
+  {
+    title: "💰 WELTH – AI-Based Personal Finance Platform",
+    description:
+      "Developed a full-stack finance tracking application with PostgreSQL and AI-powered insights. Implemented multilingual AI recommendations and secure authentication workflows for personalized budgeting and expense analytics.",
+    tech: ["Next.js", "PostgreSQL", "Supabase", "AI", "Tailwind CSS"],
     link: "https://github.com/Husam26/welth",
-    bgColor: "from-[#fef9e7] to-[#e3f2fd]",
-  },
-  {
-    title: "📝 TextUtils",
-    description:
-      "React utility app to transform and analyze text easily (word count, spaces, etc).",
-    tech: ["React", "Bootstrap", "JavaScript"],
-    link: "https://github.com/Husam26/textutiles",
-    bgColor: "from-[#e0f7fa] to-[#fdfdfd]",
-  },
-  {
-    title: "🏋️ PureFit",
-    description:
-      "MERN e-commerce fitness app with authentication, cart, admin panel, and payments.",
-    tech: ["MERN", "JWT", "Tailwind", "MongoDB"],
-    link: "https://github.com/Husam26/PureFit-",
-    liveLink: "https://pure-fit-frontend.vercel.app", // Add your live URL here
-    bgColor: "from-[#ede7f6] to-[#f3e5f5]",
-  },
-  {
-    title: "📺 Streamify",
-    description:
-      "Full-stack video platform with live video call + chat features using Stream Chat SDK.",
-    tech: ["React", "Node.js", "CSS", "Stream SDK"],
-    link: "https://github.com/Husam26/streamify",
-    liveLink: "https://streamify-no49.onrender.com", // Add your live URL here
-    bgColor: "from-[#fdf6ec] to-[#fdfdfd]",
-  },
-  {
-    title: "🗞️ NewsNow",
-    description:
-      "News app that fetches real-time headlines by category using the News API.",
-    tech: ["React", "Bootstrap", "News API"],
-    link: "https://github.com/Husam26/NewsNow",
-    liveLink: "https://your-live-salesforce-app-url.com", // Add your live URL here
-    bgColor: "from-[#ffffff] to-[#fff1e6]",
-  },
-  {
-    title: "🗂️ iNotes",
-    description:
-      "Secure cloud-based MERN app to write, edit, and manage your personal notes.",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
-    link: "https://github.com/Husam26/MernStack-Noteapp",
-    liveLink: "https://your-live-salesforce-app-url.com", // Add your live URL here
-    bgColor: "from-[#fff3e0] to-[#fdfdfd]",
+    bgColor: "from-[#fef9e7] to-[#fde68a]",
   },
 ];
 
@@ -157,16 +110,13 @@ function Projects() {
 
   const backgroundColor = useTransform(
     scrollYProgress,
-    [0, 0.14, 0.28, 0.42, 0.56, 0.7, 0.84, 1],
+    [0, 0.25, 0.5, 0.75, 1],
     [
       "#E0E7FF",
       "#D1FAE5",
       "#FEF3C7",
       "#FCE7F3",
-      "#FEE2E2",
       "#E0E7FF",
-      "#DDD6FE",
-      "#D1D5DB",
     ]
   );
 
@@ -189,7 +139,7 @@ function Projects() {
               key={i}
               index={i}
               project={project}
-              range={[i * 0.125, 1]}
+              range={[i * (1 / projects.length), 1]}
               targetScale={targetScale}
             />
           );
@@ -200,3 +150,4 @@ function Projects() {
 }
 
 export default Projects;
+

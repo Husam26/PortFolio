@@ -3,17 +3,18 @@ import { useRef } from "react";
 
 const experienceData = [
   {
-    title: "Salesforce Developer Intern",
-    company: "SmartBridge",
-    duration: "2 months",
+    title: "Full-Stack Developer Intern",
+    company: "Zenix Automotive Pvt Ltd",
+    duration: "Feb 2025 – Apr 2025",
     description:
-      "Successfully completed a Salesforce capstone project involving Apex Classes, LWC Components, Validation Rules, Screen Flows, and Deployment. Integrated real-time scenarios using custom objects and delivered a working solution for business problems.",
+      "Developed and maintained a full-stack EV Charging Management Platform using the MERN stack, delivering features for both host dashboard and user-facing booking modules. Built and optimized 15+ RESTful API endpoints for station management, booking flows, and user operations with Express.js and MongoDB. Implemented multi-connector architecture (AC/DC support), dynamic pricing, and review systems to enhance platform scalability. Improved frontend performance by 30% through component optimization, lazy loading, and efficient state management with React.",
   },
   {
-    title: "Next Role",
-    company: "Future Company",
-    duration: "Present",
-    description: "Description of your next amazing role.",
+    title: "Salesforce Developer & Administrator Intern",
+    company: "SmartBridge",
+    duration: "Aug 2024 – Oct 2024",
+    description:
+      "Successfully completed a Salesforce capstone project involving end-to-end CRM solution development. Built and deployed custom Apex Classes, LWC Components, Validation Rules, and Screen Flows for real-world business automation scenarios. Integrated real-time scenarios using custom objects, triggers, and approval processes to deliver a working solution for complex business problems.",
   },
 ];
 
